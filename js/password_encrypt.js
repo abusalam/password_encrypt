@@ -30,7 +30,7 @@
           cipher = CryptoJS.AES.encrypt(JSON.stringify(pass), passkey, {format: CryptoJSAesJson}).toString();
           $('#edit-pass-pass1').val(cipher);
           $('#edit-pass-pass2').val(cipher);
-  			}
+        }
       });
     }
   };
