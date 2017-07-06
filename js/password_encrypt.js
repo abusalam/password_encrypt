@@ -8,7 +8,7 @@
       var pass;
       var cpass;
 
-      $('#user-login').submit(function (event) {
+      $('#user-login, #user-login-form').submit(function (event) {
         pass = $('#edit-pass').val();
         if (pass !== '') {
           cipher = CryptoJS.AES.encrypt(JSON.stringify(pass), passkey, {format: CryptoJSAesJson}).toString();
