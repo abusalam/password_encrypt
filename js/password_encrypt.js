@@ -15,8 +15,8 @@
           $('#edit-pass').val(cipher);
         }
       });
-			
-      $('#user-register-form, #user-profile-form').submit(function(event) {
+
+      $('#user-register-form, #user-profile-form').submit(function (event) {
         pass = $('#edit-pass-pass1').val();
         cpass = $('#edit-pass-pass2').val();
 
@@ -27,11 +27,11 @@
         }
 
         if (pass !== '') {
-          cipher = CryptoJS.AES.encrypt(JSON.stringify(pass), passkey, {format: CryptoJSAesJson}).toString();	  
+          cipher = CryptoJS.AES.encrypt(JSON.stringify(pass), passkey, {format: CryptoJSAesJson}).toString();
           $('#edit-pass-pass1').val(cipher);
           $('#edit-pass-pass2').val(cipher);
   			}
-  		});
-  	}
+      });
+    }
   };
 })(jQuery);
