@@ -11,7 +11,7 @@
       $('#user-login, #user-login-form').submit(function (event) {
         pass = $('#edit-pass').val();
         if (pass !== '') {
-          cipher = CryptoJS.AES.encrypt(pass, passkey);                
+          cipher = CryptoJS.AES.encrypt(pass, passkey);
           $('#edit-pass').val(cipher);
         }
       });
@@ -27,7 +27,7 @@
         }
 
         if (pass !== '') {
-          cipher = CryptoJS.AES.encrypt(pass, passkey);                
+          cipher = CryptoJS.AES.encrypt(pass, passkey);
           $('#edit-pass-pass1').val(cipher);
           $('#edit-pass-pass2').val(cipher);
         }
