@@ -9,7 +9,7 @@
       var cpass;
       var current_pass;
 
-      $('#user-login, #user-login-form').submit(function (event) {
+      $('form.user-login, form.user-login-form', context).submit(function (event) {
         pass = $('#edit-pass').val();
         if (pass !== '') {
           cipher = CryptoJS.AES.encrypt(pass, passkey);
@@ -17,7 +17,7 @@
         }
       });
 
-      $('#user-register-form, #user-form').submit(function (event) {
+      $('form.user-register-form, form.user-form', context).once().submit(function (event) {
         current_pass = $('#edit-current-pass').val();
         pass = $('#edit-pass-pass1').val();
         cpass = $('#edit-pass-pass2').val();
@@ -34,7 +34,7 @@
         }
 
         if (pass !== '') {
-          cipher = CryptoJS.AES.encrypt(pass, passkey);
+          cipher = CryptoJS.AES.encrypt(pass, passkey).toString();
           $('#edit-pass-pass1').val(cipher);
           $('#edit-pass-pass2').val(cipher);
         }
